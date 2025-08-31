@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "dependencies": {
     "@hono/node-server": "^1.18.2",
     "@prisma/client": "^6.13.0",
@@ -8,5 +7,8 @@
   },
   "devDependencies": {
     "ts-node": "^10.9.2"
+  },
+  "scripts": {
+    "build": "tsc src/server.ts --outDir build"
   }
 }
