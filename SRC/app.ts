@@ -15,5 +15,13 @@ app.get("/profile", async (c) => {
         data: profiles
     }, 200);
 });
+app.post("/profile", async (c) => {
+    //logic to create a new profile
+    const body = await c.req.json();
+    console.log('input of profile ', body);
+    console.log('body.password(original) ', body.password);
+
+
+       });
 
 export default app;
