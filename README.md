@@ -1,9 +1,21 @@
 # Python Prisma
 
-kanit pattarapanu
-...
+Prawee Wongsa
+
 ## Using it
-### Windows
-copy env.simple .env
-### Mac / Linux
+```bash
 cp env.simple .env
+docker compose -f db.yml up -d
+```
+
+## Prisma
+### First time
+```bash
+npx prisma generate
+npx prisma db push
+npx prisma format
+```
+### Operation
+```bash
+npx prisma studio
+```

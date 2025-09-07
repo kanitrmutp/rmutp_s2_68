@@ -17,8 +17,8 @@ datasource db {
 model Profile {
   id       String @id @default(uuid())
   username String @unique
-  password String 
-  mobile   String @unique @db.VarChar(10)
-  cardId   String @unique @db.VarChar(13)
-
+  password String @db.VarChar(100)  // ตั้งค่าความยาวให้เพียงพอสำหรับ bcrypt
+  mobile   String @unique @db.VarChar(32) // ตั้งค่าความยาว 32 สำหรับ MD5
+  cardId   String @unique @db.VarChar(32) // ตั้งค่าความยาว 32 สำหรับ MD5
+  status   Boolean
 }
