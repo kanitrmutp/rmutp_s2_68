@@ -27,3 +27,11 @@ const decodeCipher = crypto.createDecipheriv(algorithm, key, iv);
 const decrypted = decodeCipher.update(final, 'base64', 'utf-8');
 const d_final = decrypted + decodeCipher.final('utf-8');
 console.log("decrypted(final) ", d_final);
+
+function encode(data) {
+  // ตรวจสอบความยาวของ key และ iv อีกครั้งก่อนใช้งาน
+  if (key.length !== 32 || iv.length !== 16) {
+    throw new Error('Invalid key or iv length');
+  }
+  // โค้ดเข้ารหัส
+}

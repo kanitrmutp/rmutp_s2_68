@@ -30,6 +30,16 @@ Content-Type: application/json
 
 ### Encode
 POST http://localhost:3000/encode
+Content-Type: application/json
+
+{
+  "data": "Hello World"
+}
 
 ### Decode
 POST http://localhost:3000/decode
+Content-Type: application/json
+
+{
+  "data": "ค่าที่ได้จากการ encode"
+}
